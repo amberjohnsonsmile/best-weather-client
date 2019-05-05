@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import './App.css'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
 
 require('dotenv').config()
-const port = process.env.PORT || 3000
-const url = process.env.API_URL
-console.log(url)
+const url = process.env.REACT_APP_API
 
 class App extends Component {
   constructor() {
@@ -18,12 +19,12 @@ class App extends Component {
   componentDidMount() {
     fetch(url + '/weather')
       .then(response => response.json())
-      .then(data => {
+      .then(weather => {
         this.setState({
           isLoading: false,
-          blocks: data
+          weather
         })
-        console.log(this.state.blocks)
+        console.log(this.state.weather)
       })
       .catch(console.error)
   }
@@ -31,6 +32,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="title" color="inherit">
+              BestWeather
+            </Typography>
+          </Toolbar>
+        </AppBar>
         <header className="App-header">
           <p>
             Edit <code>src/App.js</code> and save to reload.
