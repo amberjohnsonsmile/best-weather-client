@@ -15,15 +15,15 @@ View the backend code [here](github.com/amberjohnsonsmile/best-weather).
 ## Running the App Locally
 If you would like to run the React app locally, follow these steps:
 
-1. Clone this repo and the [backend repo](https://github.com/amberjohnsonsmile/block-explorer-backend) to your local machine
+1. Clone this repo and the [backend repo](github.com/amberjohnsonsmile/best-weather) to your local machine.
 
-1. Follow steps in the backend repo to start the backend
+1. Follow steps in the backend repo to start the backend.
 
-1. Navigate to the main directory of this repo and run `yarn`
+1. Navigate to the main directory of this repo and run `npm install`
 
-1. Run npm start
+1. Run `npm start`
 
-1. View the app in your web browser at localhost:3000
+1. View the app in your web browser at `localhost:3000`.
 
 
 ## Contact
